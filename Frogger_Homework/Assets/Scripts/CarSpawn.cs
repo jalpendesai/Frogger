@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class CarSpawn : MonoBehaviour {
 
-    public float spawnDelay = .9f;
+    public float spawnDelay = .3f;
     public GameObject car;
     public Transform[] SpawnPoints;
 
     float nextTimeToSpawn = 0f;
 
-    void Start()
+    /*void Start()
     {
         InvokeRepeating("SpawnCars", 0f, 1f); 
     }
+    */
 
     // Update is called once per frame
-    /*void Update () {
+    void Update () {
 		if(nextTimeToSpawn <= Time.time)
         {
             SpawnCars();
             nextTimeToSpawn = Time.time + spawnDelay;
         }
-	}*/
+	}
 
     void SpawnCars()
     {

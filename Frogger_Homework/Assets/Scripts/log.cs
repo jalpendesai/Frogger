@@ -1,11 +1,11 @@
 ﻿
 using UnityEngine;
 
-public class car : MonoBehaviour {
+public class log : MonoBehaviour {
 
     public Rigidbody2D rb;
 
-    float speed = 2.5f;
+    float speed = 1.5f;
 
     // [Optional] for setting the random speed range
     // public float minSpeed = 3f;
@@ -17,9 +17,9 @@ public class car : MonoBehaviour {
     }
 
     // FixedUpdate is meant for physics, Update is meant for everything else.
-    void FixedUpdate () {
+    void FixedUpdate() {
         Vector2 forward = new Vector2(transform.right.x, transform.right.y);
         rb.MovePosition(rb.position + forward * Time.fixedDeltaTime * speed);
-		
-	}
+
+    }
 }
